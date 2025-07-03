@@ -6,6 +6,7 @@
     "outDir": "dist", // 컴파일 결과 위치
     "strict": true,
     "moduleDetection": "force", // 타입스크립트 최신
+    "moduleResolution": "node", // 노드 모듈 시스템 사용
     "skipLibCheck": true // "undici-types" 오류 방지
   },
   "ts-node": {

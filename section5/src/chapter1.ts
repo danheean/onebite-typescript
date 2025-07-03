@@ -2,7 +2,7 @@
  * 인터페이스 확장(상속)
  */
 
-interface Animal {
+type Animal = {
   name: string;
   color: string;
 }
