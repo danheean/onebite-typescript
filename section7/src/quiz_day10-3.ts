@@ -8,22 +8,21 @@
 
 /* [Quiz] 아래의 코드를 수정하세요 */
 function map<T, U>(arr: T[], callback: (item: T) => U): U[] {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-      result.push(callback(arr[i]));
-    }
-    return result;
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(callback(arr[i]));
   }
-  
-  /* [Test] 여기부터는 정답을 체크하기 위한 용도로 수정하지 않습니다 */
-  import { Equal, Expect, NotAny } from "@type-challenges/utils";
-  const tc1: number[] = map([1, 2, 3], (item) => item);
-  const tc2: string[] = map([1, 2, 3], (item) => item.toString());
-  
-  type TestCases = [
-    Expect<NotAny<Parameters<typeof map>[0]>>,
-    Expect<NotAny<Parameters<typeof map>[1]>>,
-    Expect<Equal<typeof tc1, number[]>>,
-    Expect<Equal<typeof tc2, string[]>>
-  ];
-  
+  return result;
+}
+
+/* [Test] 여기부터는 정답을 체크하기 위한 용도로 수정하지 않습니다 */
+import { Equal, Expect, NotAny } from "@type-challenges/utils";
+const tc1: number[] = map([1, 2, 3], (item) => item);
+const tc2: string[] = map([1, 2, 3], (item) => item.toString());
+
+type TestCases = [
+  Expect<NotAny<Parameters<typeof map>[0]>>,
+  Expect<NotAny<Parameters<typeof map>[1]>>,
+  Expect<Equal<typeof tc1, number[]>>,
+  Expect<Equal<typeof tc2, string[]>>
+];
