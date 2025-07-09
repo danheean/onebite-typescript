@@ -1,0 +1,32 @@
+1. 설치
+npx create-react-app .
+
+2. 불필요한 파일 삭제
+App.test.js
+logo.svg
+reportWebVitals.js
+setupTests.js
+
+3. 파일 정리
+App.js
+index.js 
+
+4. 타입스크립트 설치
+npm i @types/node @types/react @types/react-dom @types/jest
+
+5. tsconfig.json 설정
+{
+    "compilerOptions": {
+        "target": "ES5", 
+        "module": "CommonJS",
+        "strict": true,
+        "allowJs": true, 
+        "esModuleInterop": true // default가 없어도 import 허용
+        "jsx": "react-jsx" // 타입스크립트에서 jsx 허용
+    }, 
+    "include": ["src"]
+}
+
+6. *.js 파일을 하나씩 tsx로 변경
+
+7. 실행
