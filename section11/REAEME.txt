@@ -30,3 +30,6 @@ npm i @types/node @types/react @types/react-dom @types/jest
 6. *.js 파일을 하나씩 tsx로 변경
 
 7. 실행
+npm run start
+
+8. npm (ts mark)
